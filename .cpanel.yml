@@ -1,8 +1,5 @@
 ---
 deployment:
   tasks:
-    # Target directory on cPanel (modify this if your domain points to a different folder)
     - export DEPLOYPATH=/home/staz4683/public_html
-    
-    # Sync files from repository to the deployment path, excluding Git config, env secrets, and build files
     - /bin/rsync -av --exclude='.git' --exclude='.cpanel.yml' --exclude='.env' --exclude='.agents' --exclude='.codex' --exclude='starstyle_deploy.zip' ./ $DEPLOYPATH
