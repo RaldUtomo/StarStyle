@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/staz4683/public_html
-    - /bin/rsync -av --exclude='.git' --exclude='.cpanel.yml' --exclude='.env' --exclude='.agents' --exclude='.codex' --exclude='starstyle_deploy.zip' ./ $DEPLOYPATH
+    - rsync -av --exclude='.git' --exclude='.cpanel.yml' --exclude='.env' --exclude='.agents' --exclude='.codex' --exclude='starstyle_deploy.zip' ./ $DEPLOYPATH
